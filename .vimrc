@@ -62,5 +62,5 @@ set showmatch
 set laststatus=2
 set list
 set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
-colorscheme antares
-let g:airline_theme='tender'
+colorscheme onedark
+let g:airline_theme='onedark'
