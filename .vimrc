@@ -27,6 +27,7 @@ if dein#load_state('/home/nakamo/.cache/dein')
   call dein#add('toupeira/vim-desertink')
   call dein#add('chriskempson/base16-vim')
   call dein#add('morhetz/gruvbox')
+  call dein#add('chriskempson/base16-vim')
 
   " Required:
   call dein#end()
@@ -62,5 +63,5 @@ set showmatch
 set laststatus=2
 set list
 set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
-colorscheme antares
-let g:airline_theme='tender'
+colorscheme base16-default-dark
+let g:airline_theme='base16_default_dark'

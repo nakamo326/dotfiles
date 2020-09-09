@@ -50,23 +50,26 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-export PATH="$PATH:/home/nakamo/julia-1.5.1/bin"
-
 export USER=ynakamot
 export MAIL=$USER@student.42tokyo.jp
 alias norminette="~/.norminette/norminette.rb"
 alias norm='norminette -R CheckForbiddenSourceHeader'
 alias normft='norminette -R CheckForbiddenSourceHeader ex*/ft*'
 alias gg='gcc -Wall -Wextra -Werror *.c'
-alias cft='gcc -Wall -Wextra -Werror'
 
 
 alias stmux='tmux source-file ~/.tmux.conf'
+alias venv='source ~/venv/.venv/bin/activate'
 alias ..='cd ..'
 alias ..2='cd ../..'
 alias ..3='cd ../../..'
-alias wp='cd ~/workspace/piscine/'
+alias wo='cd ~/workspace'
 alias ls='ls -F --color'
+alias la='ls -aF --color'
+alias lla='ls -laF --color'
+alias ga.='git add .'
+alias gc='git commit -m'
+alias gp='git push'
 
 source ~/.zplug/init.zsh
 
