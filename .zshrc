@@ -67,9 +67,6 @@ alias wo='cd ~/workspace'
 alias ls='ls -F --color'
 alias la='ls -aF --color'
 alias lla='ls -laF --color'
-alias ga.='git add .'
-alias gc='git commit -m'
-alias gp='git push'
 
 source ~/.zplug/init.zsh
 
