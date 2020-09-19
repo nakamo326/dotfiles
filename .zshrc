@@ -50,8 +50,8 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-export USER=ynakamot
-export MAIL=$USER@student.42tokyo.jp
+#export USER=ynakamot
+#export MAIL=$USER@student.42tokyo.jp
 alias norminette="~/.norminette/norminette.rb"
 alias norm='norminette -R CheckForbiddenSourceHeader'
 alias normft='norminette -R CheckForbiddenSourceHeader ex*/ft*'
@@ -67,6 +67,7 @@ alias wo='cd ~/workspace'
 alias ls='ls -F --color'
 alias la='ls -aF --color'
 alias lla='ls -laF --color'
+alias venv='source ~/venv/.venv/bin/activate'
 
 source ~/.zplug/init.zsh
 
