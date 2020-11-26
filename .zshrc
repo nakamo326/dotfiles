@@ -27,6 +27,7 @@ compinit
 setopt auto_list
 setopt auto_menu
 setopt auto_cd
+setopt nonomatch
 
 autoload colors
 colors
@@ -50,13 +51,16 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-#export USER=ynakamot
-#export MAIL=$USER@student.42tokyo.jp
+export USER=ynakamot
+export MAIL=$USER@student.42tokyo.jp
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0
 alias norminette="~/.norminette/norminette.rb"
 alias norm='norminette -R CheckForbiddenSourceHeader'
 alias normft='norminette -R CheckForbiddenSourceHeader ex*/ft*'
-alias gg='gcc -Wall -Wextra -Werror *.c'
+alias gwww='gcc -Wall -Wextra -Werror'
 
+# colored GCC warnings and errors↲
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'↲
 
 alias stmux='tmux source-file ~/.tmux.conf'
 alias venv='source ~/venv/.venv/bin/activate'
@@ -64,10 +68,15 @@ alias ..='cd ..'
 alias ..2='cd ../..'
 alias ..3='cd ../../..'
 alias wo='cd ~/workspace'
+alias 42='cd ~/workspace/42cursus/'
 alias ls='ls -F --color'
 alias la='ls -aF --color'
 alias lla='ls -laF --color'
 alias venv='source ~/venv/.venv/bin/activate'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 source ~/.zplug/init.zsh
 
