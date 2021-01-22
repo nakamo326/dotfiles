@@ -27,6 +27,7 @@ compinit
 setopt auto_list
 setopt auto_menu
 setopt auto_cd
+setopt nonomatch
 
 autoload colors
 colors
@@ -70,6 +71,9 @@ alias lla='ls -laF --color'
 
 source ~/.zplug/init.zsh
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-autosuggestions"
