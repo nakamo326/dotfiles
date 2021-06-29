@@ -54,9 +54,7 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 export USER=ynakamot
 export MAIL=$USER@student.42tokyo.jp
 export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0
-alias norminette="~/.norminette/norminette.rb"
-alias norm='norminette -R CheckForbiddenSourceHeader'
-alias normft='norminette -R CheckForbiddenSourceHeader ex*/ft*'
+export PATH="$HOME/.local/bin:$PATH"
 alias gwww='gcc -Wall -Wextra -Werror'
 
 # colored GCC warnings and errors↲
@@ -72,7 +70,7 @@ alias 42='cd ~/workspace/42cursus/'
 alias ls='ls -F --color'
 alias la='ls -aF --color'
 alias lla='ls -laF --color'
-alias venv='source ~/venv/.venv/bin/activate'
+alias dc='docker-compose'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -96,7 +94,8 @@ if ! zplug check --verbose; then
 	fi
 fi
 
-zplug load --verbose
+zplug load #--verbose
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+source "$HOME/.cargo/env"
