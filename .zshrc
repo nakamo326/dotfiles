@@ -78,13 +78,12 @@ export NVM_DIR="$HOME/.nvm"
 
 source ~/.zplug/init.zsh
 
-
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-autosuggestions"
 zplug "plugins/git",   from:oh-my-zsh
 zplug "chrissicool/zsh-256color"
 zplug "romkatv/powerlevel10k", as:theme, depth:1
-
+zplug "zsh-users/zsh-completions"
 
 
 if ! zplug check --verbose; then
