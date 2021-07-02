@@ -70,6 +70,7 @@ alias 42='cd ~/workspace/42cursus/'
 alias ls='ls -F --color'
 alias la='ls -aF --color'
 alias lla='ls -laF --color'
+alias dc='docker-compose'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -93,7 +94,8 @@ if ! zplug check --verbose; then
 	fi
 fi
 
-zplug load
+zplug load #--verbose
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+source "$HOME/.cargo/env"
