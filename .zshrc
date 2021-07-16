@@ -54,7 +54,7 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 export USER=ynakamot
 export MAIL=$USER@student.42tokyo.jp
 export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0
-export PATH="$HOME/.local/bin:$PATH"
+alias norm='norminette'
 alias gwww='gcc -Wall -Wextra -Werror'
 
 # colored GCC warnings and errors↲
@@ -79,13 +79,12 @@ export NVM_DIR="$HOME/.nvm"
 
 source ~/.zplug/init.zsh
 
-
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-autosuggestions"
 zplug "plugins/git",   from:oh-my-zsh
 zplug "chrissicool/zsh-256color"
 zplug "romkatv/powerlevel10k", as:theme, depth:1
-
+zplug "zsh-users/zsh-completions"
 
 
 if ! zplug check --verbose; then
