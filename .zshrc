@@ -67,10 +67,11 @@ alias ..2='cd ../..'
 alias ..3='cd ../../..'
 alias wo='cd ~/workspace'
 alias 42='cd ~/workspace/42cursus/'
-alias ls='ls -F --color'
-alias la='ls -aF --color'
-alias lla='ls -laF --color'
+alias ls='exa -F --icons'
+alias la='exa -aF --icons'
+alias lla='exa -laF --icons'
 alias dc='docker-compose'
+alias cat='batcat'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

@@ -25,9 +25,8 @@ if dein#load_state('/home/nakamo/.cache/dein')
   call dein#add('tomasr/molokai')
   call dein#add('joshdick/onedark.vim')
   call dein#add('toupeira/vim-desertink')
-  call dein#add('chriskempson/base16-vim')
   call dein#add('morhetz/gruvbox')
-  call dein#add('chriskempson/base16-vim')
+  call dein#add('sheerun/vim-polyglot')
 
   " Required:
   call dein#end()
@@ -46,6 +45,7 @@ endif
 "set termguicolors
 
 set hlsearch
+set number
 set ignorecase
 set incsearch
 set smartcase
@@ -63,5 +63,6 @@ set showmatch
 set laststatus=2
 set list
 set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
-colorscheme onedark
-let g:airline_theme='onedark'
+colorscheme gruvbox
+let g:airline_theme='gruvbox'
+set background=dark
