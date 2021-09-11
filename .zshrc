@@ -98,4 +98,10 @@ zplug load #--verbose
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 source "$HOME/.cargo/env"
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+	PATH="$HOME/.local/bin:$PATH"
+fi
