@@ -72,6 +72,7 @@ alias la='exa -aF --icons'
 alias lla='exa -laF --icons'
 alias dc='docker-compose'
 alias cat='batcat'
+alias pbcopy='clip.exe'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
