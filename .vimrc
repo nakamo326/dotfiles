@@ -27,6 +27,7 @@ if dein#load_state('/home/nakamo/.cache/dein')
   call dein#add('toupeira/vim-desertink')
   call dein#add('morhetz/gruvbox')
   call dein#add('sheerun/vim-polyglot')
+  call dein#add('preservim/nerdtree')
 
   " Required:
   call dein#end()
@@ -42,7 +43,7 @@ if dein#check_install()
   call dein#install()
 endif
 
-"set termguicolors
+set termguicolors
 
 set hlsearch
 set number
@@ -59,6 +60,10 @@ nnoremap j gj
 nnoremap k gk
 nnoremap <down> gj
 nnoremap <up> gk
+nnoremap  <C-j> }
+nnoremap  <C-k> {
+autocmd vimenter * NERDTree
+map <C-n> :NERDTreeToggle<CR>
 set showmatch
 set laststatus=2
 set list
