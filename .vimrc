@@ -29,6 +29,7 @@ if dein#load_state('/home/nakamo/.cache/dein')
   call dein#add('sheerun/vim-polyglot')
   call dein#add('preservim/nerdtree')
 
+
   " Required:
   call dein#end()
   call dein#save_state()
@@ -42,6 +43,10 @@ syntax enable
 if dein#check_install()
   call dein#install()
 endif
+
+call map(dein#check_clean(), "delete(v:val, 'rf')")
+# :call dein#recache_runtimepath()
+
 
 set termguicolors
 
