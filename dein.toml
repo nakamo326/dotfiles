@@ -37,12 +37,6 @@ repo = 'Yggdroot/indentLine'
 [[plugins]]
 repo = 'sheerun/vim-polyglot'
 
-# [[plugin]]
-# repo = 'Shougo/pum.vim'
-
-
-# [[plugin]]
-# repo = 'Shougo/ddc.vim'
 
 # [[plugins]]
 # repo = ''
