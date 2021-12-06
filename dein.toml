@@ -3,6 +3,8 @@
 # [[plugins]]
 #   call dein#add('Shougo/neosnippet-snippets')
 
+[[plugins]]
+repo = 'Shougo/dein.vim'
 
 [[plugins]]
 repo ='morhetz/gruvbox'
@@ -12,11 +14,18 @@ hook_add = '''
 
 [[plugins]]
 repo = 'vim-airline/vim-airline'
+depends = ['vim-airline-themes']
 
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
 hook_add = '''
 	let g:airline_theme='gruvbox'
+'''
+
+[[plugins]]
+repo = 'preservim/nerdtree'
+hook_add = '''
+	map <C-n> :NERDTreeToggle<CR>
 '''
 
 [[plugins]]
@@ -28,8 +37,13 @@ repo = 'Yggdroot/indentLine'
 [[plugins]]
 repo = 'sheerun/vim-polyglot'
 
-[[plugins]]
-repo = 'preservim/nerdtree'
-hook_add = '''
-	map <C-b> :NERDTreeToggle<CR>
-'''
+# [[plugin]]
+# repo = 'Shougo/pum.vim'
+
+
+# [[plugin]]
+# repo = 'Shougo/ddc.vim'
+
+# [[plugins]]
+# repo = ''
+
