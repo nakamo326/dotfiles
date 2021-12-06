@@ -1,0 +1,35 @@
+# [[plugins]]
+#  call dein#add('Shougo/neosnippet.vim')
+# [[plugins]]
+#   call dein#add('Shougo/neosnippet-snippets')
+
+
+[[plugins]]
+repo ='morhetz/gruvbox'
+hook_add = '''
+	colorscheme gruvbox
+'''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+hook_add = '''
+	let g:airline_theme='gruvbox'
+'''
+
+[[plugins]]
+repo = 'bronson/vim-trailing-whitespace'
+
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+
+[[plugins]]
+repo = 'sheerun/vim-polyglot'
+
+[[plugins]]
+repo = 'preservim/nerdtree'
+hook_add = '''
+	map <C-b> :NERDTreeToggle<CR>
+'''

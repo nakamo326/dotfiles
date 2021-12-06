@@ -13,15 +13,17 @@ if dein#load_state('/home/nakamo/.cache/dein')
   " Required:
   call dein#add('/home/nakamo/.cache/dein/repos/github.com/Shougo/dein.vim')
 
+  let s:toml      = '$HOME/dotfiles/dein.toml'
+  let s:lazy_toml = '$HOME/dotfiles/dein_lazy.toml'
   " Add or remove your plugins here like this:
   "call dein#add('Shougo/neosnippet.vim')
   "call dein#add('Shougo/neosnippet-snippets')
+  "call dein#load_toml(s:toml,      {'lazy': 0})
+  "call dein#load_toml(s:lazy_toml, {'lazy': 1})
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')
-  call dein#add('jacoborus/tender.vim')
   call dein#add('bronson/vim-trailing-whitespace')
   call dein#add('Yggdroot/indentLine')
-  call dein#add('Haron-Prime/Antares')
   call dein#add('tomasr/molokai')
   call dein#add('joshdick/onedark.vim')
   call dein#add('toupeira/vim-desertink')
@@ -45,7 +47,8 @@ if dein#check_install()
 endif
 
 call map(dein#check_clean(), "delete(v:val, 'rf')")
-# :call dein#recache_runtimepath()
+
+" :call dein#recache_runtimepath()
 
 
 set termguicolors
