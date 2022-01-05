@@ -70,7 +70,7 @@ nnoremap <down> gj
 nnoremap <up> gk
 nnoremap  <C-j> }
 nnoremap  <C-k> {
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
 map <C-n> :NERDTreeToggle<CR>
 set showmatch
 set laststatus=2

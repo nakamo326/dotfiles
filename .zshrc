@@ -73,8 +73,8 @@ alias lla='exa -laF --icons'
 alias dc='docker-compose'
 alias cat='batcat'
 alias pbcopy='clip.exe'
-alias clangp='clang++'
-alias vim='nvim'
+alias cpp='clang++'
+# alias vim='nvim'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -108,6 +108,8 @@ source "$HOME/.cargo/env"
 if [ -d "$HOME/.local/bin" ] ; then
 	PATH="$HOME/.local/bin:$PATH"
 fi
+
+export PATH=$PATH:/usr/local/go/bin
 
 #deno path
 export DENO_INSTALL="/home/nakamo/.deno"
