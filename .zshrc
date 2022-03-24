@@ -51,10 +51,10 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-export USER=ynakamot
-export MAIL=$USER@student.42tokyo.jp
+# export USER=ynakamot
+# export MAIL=$USER@student.42tokyo.jp
 export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0
-export MAKEFLAGS=-j$[$(grep cpu.cores /proc/cpuinfo | sort -u | sed 's/[^0-9]//g') + 1]
+# export MAKEFLAGS=-j$[$(grep cpu.cores /proc/cpuinfo | sort -u | sed 's/[^0-9]//g') + 1]
 alias norm='norminette'
 alias gwww='gcc -Wall -Wextra -Werror'
 
@@ -75,6 +75,7 @@ alias dc='docker-compose'
 alias cat='batcat'
 alias pbcopy='clip.exe'
 alias cpp='clang++'
+alias clang++='clang++-12'
 # alias vim='nvim'
 
 export NVM_DIR="$HOME/.nvm"
@@ -116,3 +117,4 @@ export PATH=$PATH:/usr/local/go/bin
 export DENO_INSTALL="/home/nakamo/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
