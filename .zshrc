@@ -58,6 +58,9 @@ export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0
 alias norm='norminette'
 alias gwww='gcc -Wall -Wextra -Werror'
 
+# open command for WSL
+function open() { cmd.exe /c start $(wslpath -w $1) }
+
 # colored GCC warnings and errors↲
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'↲
 
