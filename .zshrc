@@ -54,12 +54,13 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 # export USER=ynakamot
 # export MAIL=$USER@student.42tokyo.jp
 export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0
-# export MAKEFLAGS=-j$[$(grep cpu.cores /proc/cpuinfo | sort -u | sed 's/[^0-9]//g') + 1]
+export MAKEFLAGS=-j$[$(grep cpu.cores /proc/cpuinfo | sort -u | sed 's/[^0-9]//g') + 1]
+alias mkr="make fclean && make"
 alias norm='norminette'
 alias gwww='gcc -Wall -Wextra -Werror'
 
 # open command for WSL
-function open() { cmd.exe /c start $(wslpath -w $1) }
+function open() { cmd.exe /c start $(wslpath -w $1) 2> /dev/null }
 
 # colored GCC warnings and errors↲
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'↲
@@ -79,6 +80,8 @@ alias cat='batcat'
 alias pbcopy='clip.exe'
 alias cpp='clang++'
 alias clang++='clang++-12'
+alias clang-format='clang-format-12'
+alias clang-tidy='clang-tidy-12'
 # alias vim='nvim'
 
 export NVM_DIR="$HOME/.nvm"
