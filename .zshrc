@@ -66,7 +66,7 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 # export USER=ynakamot
 # export MAIL=$USER@student.42tokyo.jp
-export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0
+export DISPLAY=:0
 export MAKEFLAGS=-j$[$(grep cpu.cores /proc/cpuinfo | sort -u | sed 's/[^0-9]//g') + 1]
 alias mkr="make fclean && make"
 alias make="make "
