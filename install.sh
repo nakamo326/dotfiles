@@ -1,10 +1,5 @@
 #!/bin/bash
 
-curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > dein_installer.sh
-# For example, we just use `~/.cache/dein` as installation directory
-sh ./dein_installer.sh ~/.cache/dein
-
-
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
