@@ -146,9 +146,6 @@ autoload -Uz +X bashcompinit && bashcompinit
 
 # load completions
 
-## az
-source /opt/homebrew/etc/bash_completion.d/az
-
 ## kubectl
 source <(kubectl completion zsh)
 
