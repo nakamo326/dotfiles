@@ -9,6 +9,10 @@ ln -s ~/dotfiles/.zprofile ~/.zprofile
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 mkdir -p ~/.config
+mkdir -p ~/.config/alacritty
+mkdir -p ~/.config/starship
+mkdir -p ~/.config/ghostty
+mkdir -p ~/.config/mise
 ln -s ~/dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
 ln -s ~/dotfiles/starship.toml ~/.config/starship.toml
 ln -s ~/dotfiles/ghostty ~/.config/ghostty
