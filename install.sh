@@ -17,6 +17,8 @@ ln -s ~/dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
 ln -s ~/dotfiles/starship.toml ~/.config/starship.toml
 ln -s ~/dotfiles/ghostty/config ~/.config/ghostty/config
 ln -s ~/dotfiles/mise/config.toml ~/.config/mise/config.toml
+mkdir -p ~/Library/Application\ Support/lazygit
+ln -s ~/dotfiles/lazygit/config.yml ~/Library/Application\ Support/lazygit/config.yml
 mkdir -p ~/.agents
 ln -s ~/dotfiles/agents/.skill-lock.json ~/.agents/.skill-lock.json
 # ln -s ~/dotfiles/init.vim ~/.config/nvim/init.vim
