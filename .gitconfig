@@ -16,3 +16,9 @@
 	helper = /usr/local/share/gcm-core/git-credential-manager
 [credential "https://dev.azure.com"]
 	useHttpPath = true
+[alias]
+	dft = -c diff.external=difft diff
+	dshow = -c diff.external=difft show
+	dlog = -c diff.external=difft log -p --ext-diff
+	bdiff = "!f() { base=${1:-main}; git -c diff.external=difft diff \"$base\"...HEAD; }; f"
+	bstat = "!f() { base=${1:-main}; git diff --stat \"$base\"...HEAD; }; f"
