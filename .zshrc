@@ -75,16 +75,11 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 # ────────────────────────────────────────────────────────────────
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
-export MAKEFLAGS=-j4
+export MAKEFLAGS=-j$(sysctl -n hw.ncpu)
 
 # ────────────────────────────────────────────────────────────────
 # 🔗 エイリアス集
 # ────────────────────────────────────────────────────────────────
-alias mkr="make fclean && make"
-alias make="make "
-alias re="fclean && make"
-alias stmux='tmux source-file ~/.tmux.conf'
-alias venv='source ~/venv/.venv/bin/activate'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -93,14 +88,8 @@ alias ls='eza --icons --git --time-style relative'
 alias la='eza --icons --git --time-style relative -a'
 alias lla='eza --icons --git --time-style relative -al'
 alias cat='bat'
-alias cpp='clang++'
 alias tf='terraform'
 alias dotup='~/dotfiles/update.sh'
-
-# ────────────────────────────────────────────────────────────────
-# 🔐 ssh-agent & 鍵登録
-# ────────────────────────────────────────────────────────────────
-ssh-add -l | grep 'id_ed25519' > /dev/null 2>&1 || ssh-add ~/.ssh/id_ed25519 2> /dev/null
 
 # ────────────────────────────────────────────────────────────────
 # 📂 PATH カスタマイズ
@@ -127,9 +116,6 @@ unalias zi
 
 # fzf
 source <(fzf --zsh)
-
-# pyenv (mac)
-command -v pyenv >/dev/null && eval "$(pyenv init --path)"
 
 # starship
 eval "$(starship init zsh)"
