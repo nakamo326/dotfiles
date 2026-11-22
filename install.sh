@@ -3,24 +3,7 @@
 mkdir -p ~/workspace
 
 # create links
-ln -s ~/dotfiles/.vimrc ~/.vimrc
-ln -s ~/dotfiles/.zshrc ~/.zshrc
-ln -s ~/dotfiles/.zprofile ~/.zprofile
-ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
-ln -s ~/dotfiles/.gitconfig ~/.gitconfig
-mkdir -p ~/.config
-mkdir -p ~/.config/alacritty
-mkdir -p ~/.config/starship
-mkdir -p ~/.config/ghostty
-mkdir -p ~/.config/mise
-ln -s ~/dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
-ln -s ~/dotfiles/starship.toml ~/.config/starship.toml
-ln -s ~/dotfiles/ghostty/config ~/.config/ghostty/config
-ln -s ~/dotfiles/mise/config.toml ~/.config/mise/config.toml
-mkdir -p ~/Library/Application\ Support/lazygit
-ln -s ~/dotfiles/lazygit/config.yml ~/Library/Application\ Support/lazygit/config.yml
-mkdir -p ~/.agents
-ln -s ~/dotfiles/agents/.skill-lock.json ~/.agents/.skill-lock.json
+~/dotfiles/link.sh
 # ln -s ~/dotfiles/init.vim ~/.config/nvim/init.vim
 # ln -s ~/dotfiles/.wezterm.lua ~/.wezterm.lua
 

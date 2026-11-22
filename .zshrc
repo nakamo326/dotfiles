@@ -95,6 +95,7 @@ alias lla='eza --icons --git --time-style relative -al'
 alias cat='bat'
 alias cpp='clang++'
 alias tf='terraform'
+alias dotup='~/dotfiles/update.sh'
 
 # ────────────────────────────────────────────────────────────────
 # 🔐 ssh-agent & 鍵登録
