@@ -105,22 +105,21 @@ ssh-add -l | grep 'id_ed25519' > /dev/null 2>&1 || ssh-add ~/.ssh/id_ed25519 2> 
 # ────────────────────────────────────────────────────────────────
 # 📂 PATH カスタマイズ
 # ────────────────────────────────────────────────────────────────
-# Homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
-export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
+# Homebrew（shellenv は .zprofile で実行済み）
+[ -n "$HOMEBREW_PREFIX" ] && export LIBRARY_PATH="$LIBRARY_PATH:$HOMEBREW_PREFIX/lib"
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-source "$HOME/.cargo/env"
+[ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
 
 # ────────────────────────────────────────────────────────────────
 # 🛠️ ツールの初期化
 # ────────────────────────────────────────────────────────────────
 # mise
-eval "$(/opt/homebrew/bin/mise activate zsh)"
+command -v mise >/dev/null && eval "$(mise activate zsh)"
 
 # zoxide
 eval "$(zoxide init --cmd cd zsh)"
@@ -130,7 +129,7 @@ unalias zi
 source <(fzf --zsh)
 
 # pyenv (mac)
-eval "$(pyenv init --path)"
+command -v pyenv >/dev/null && eval "$(pyenv init --path)"
 
 # starship
 eval "$(starship init zsh)"
@@ -148,13 +147,18 @@ autoload -Uz +X bashcompinit && bashcompinit
 # load completions
 
 ## kubectl
-source <(kubectl completion zsh)
+command -v kubectl >/dev/null && source <(kubectl completion zsh)
 
 ## terraform
-complete -o nospace -C /opt/homebrew/bin/terraform terraform
+command -v terraform >/dev/null && complete -o nospace -C "$(command -v terraform)" terraform
 
 ## bun
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 ## docker
-source <(docker completion zsh)
+command -v docker >/dev/null && source <(docker completion zsh)
+
+# ────────────────────────────────────────────────────────────────
+# 🏠 マシン固有の設定（git 管理外）
+# ────────────────────────────────────────────────────────────────
+[ -f "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"

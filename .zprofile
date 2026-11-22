@@ -1,6 +1,11 @@
-# The following lines were added by Docker Desktop to add commands to your PATH.
-export PATH="$PATH:/Users/pc250803/.docker/bin"
-# End of Docker Desktop section.
+# Homebrew (Apple Silicon / Intel のどちらでも)
+for brew_bin in /opt/homebrew/bin/brew /usr/local/bin/brew; do
+  if [ -x "$brew_bin" ]; then
+    eval "$("$brew_bin" shellenv)"
+    break
+  fi
+done
+unset brew_bin
 
 if [ -z "$SSH_AUTH_SOCK" ]; then
   # Check for a currently running instance of the agent
@@ -12,5 +17,5 @@ if [ -z "$SSH_AUTH_SOCK" ]; then
   eval `cat $HOME/.ssh/ssh-agent`
 fi
 
-# Added by Obsidian
-export PATH="$PATH:/Applications/Obsidian.app/Contents/MacOS"
+# Obsidian CLI
+[ -d /Applications/Obsidian.app/Contents/MacOS ] && export PATH="$PATH:/Applications/Obsidian.app/Contents/MacOS"

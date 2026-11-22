@@ -29,3 +29,15 @@ link ghostty/config          ~/.config/ghostty/config
 link mise/config.toml        ~/.config/mise/config.toml
 link lazygit/config.yml      ~/Library/Application\ Support/lazygit/config.yml
 link agents/.skill-lock.json ~/.agents/.skill-lock.json
+
+# docker CLI プラグイン（Homebrew の compose / buildx を docker から使えるようにする）
+if command -v brew >/dev/null; then
+  for plugin in docker-compose docker-buildx; do
+    bin="$(brew --prefix)/opt/$plugin/bin/$plugin"
+    dst="$HOME/.docker/cli-plugins/$plugin"
+    if [ -x "$bin" ] && [ "$(readlink "$dst" 2>/dev/null)" != "$bin" ]; then
+      mkdir -p "$(dirname "$dst")"
+      ln -sfn "$bin" "$dst" && echo "linked:   $dst -> $bin"
+    fi
+  done
+fi
