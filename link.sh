@@ -27,6 +27,7 @@ link ghostty/config          ~/.config/ghostty/config
 link mise/config.toml        ~/.config/mise/config.toml
 link lazygit/config.yml      ~/Library/Application\ Support/lazygit/config.yml
 link agents/.skill-lock.json ~/.agents/.skill-lock.json
+link zed/settings.json       ~/.config/zed/settings.json
 
 # docker CLI プラグイン（Homebrew の compose / buildx を docker から使えるようにする）
 if command -v brew >/dev/null; then

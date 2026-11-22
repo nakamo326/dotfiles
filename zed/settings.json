@@ -1,0 +1,23 @@
+// Zed の設定。UI から変更するとこのファイル（リンク先）が書き換わる。
+// https://zed.dev/docs/configuring-zed
+{
+  "base_keymap": "VSCode",
+  "theme": {
+    "mode": "system",
+    "light": "Gruvbox Light",
+    "dark": "Gruvbox Dark"
+  },
+  "buffer_font_family": "HackGen Console NF",
+  "buffer_font_size": 15,
+  "buffer_font_features": {
+    "calt": false,
+    "liga": false
+  },
+  "terminal": {
+    "font_family": "HackGen Console NF"
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  }
+}
