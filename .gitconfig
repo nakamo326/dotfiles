@@ -1,6 +1,6 @@
 [user]
 	email = nakamo326@gmail.com
-	name = Ynakamot
+	name = Yasufumi Nakamoto
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -11,6 +11,12 @@
 [core]
 	autocrlf = input
 	safecrlf = true
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	line-numbers = true
 [credential]
 	helper = 
 	helper = /usr/local/share/gcm-core/git-credential-manager

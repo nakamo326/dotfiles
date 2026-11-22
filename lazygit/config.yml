@@ -1,4 +1,7 @@
 git:
+  # `|` / `\` で切り替え
   diffRenderers:
     - command: difft --color=always --display=inline
       type: extDiff
+    - command: delta --dark --paging=never
+      type: stdinFilter
