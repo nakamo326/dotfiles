@@ -21,9 +21,7 @@ link() {
 link .vimrc                  ~/.vimrc
 link .zshrc                  ~/.zshrc
 link .zprofile               ~/.zprofile
-link .tmux.conf              ~/.tmux.conf
 link .gitconfig              ~/.gitconfig
-link alacritty.yml           ~/.config/alacritty/alacritty.yml
 link starship.toml           ~/.config/starship.toml
 link ghostty/config          ~/.config/ghostty/config
 link mise/config.toml        ~/.config/mise/config.toml
