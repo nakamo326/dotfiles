@@ -138,9 +138,6 @@ command -v kubectl >/dev/null && source <(kubectl completion zsh)
 ## terraform
 command -v terraform >/dev/null && complete -o nospace -C "$(command -v terraform)" terraform
 
-## bun
-[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
-
 ## docker
 command -v docker >/dev/null && source <(docker completion zsh)
 
