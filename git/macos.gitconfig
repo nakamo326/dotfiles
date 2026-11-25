@@ -1,0 +1,6 @@
+# macOS 固有の git 設定（link.sh が ~/.config/git/os.gitconfig にリンクする）
+[credential]
+	helper =
+	helper = /usr/local/share/gcm-core/git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true

@@ -1,5 +1,5 @@
-# Homebrew (Apple Silicon / Intel のどちらでも)
-for brew_bin in /opt/homebrew/bin/brew /usr/local/bin/brew; do
+# Homebrew (Apple Silicon / Intel / Linux のどれでも)
+for brew_bin in /opt/homebrew/bin/brew /usr/local/bin/brew /home/linuxbrew/.linuxbrew/bin/brew; do
   if [ -x "$brew_bin" ]; then
     eval "$("$brew_bin" shellenv)"
     break

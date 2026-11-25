@@ -5,8 +5,13 @@ on:
 
 jobs:
   run-install-sh:
-    runs-on: macos-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
       - run: /bin/bash install.sh
       - run: /bin/bash macos.sh
+        if: runner.os == 'macOS'

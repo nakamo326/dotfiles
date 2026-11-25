@@ -1,0 +1,8 @@
+# Linux 固有の git 設定（link.sh が ~/.config/git/os.gitconfig にリンクする）
+# GitHub の認証は gh を使う（事前に `gh auth login`）
+[credential "https://github.com"]
+	helper =
+	helper = !gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !gh auth git-credential

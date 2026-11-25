@@ -1,6 +1,11 @@
 #!/bin/bash
 # macOS の設定。好みの設定を書き込むので、新しいマシンで一度だけ実行する想定。
 
+if [ "$(uname -s)" != Darwin ]; then
+  echo "macOS 以外なのでスキップします" >&2
+  exit 0
+fi
+
 # disable apple music
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
 

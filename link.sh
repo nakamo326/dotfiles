@@ -5,6 +5,11 @@ set -u
 
 DOTFILES="$(cd "$(dirname "$0")" && pwd)"
 
+case "$(uname -s)" in
+  Darwin) OS=macos ;;
+  *)      OS=linux ;;
+esac
+
 link() {
   local src="$DOTFILES/$1" dst="$2"
   mkdir -p "$(dirname "$dst")"
@@ -25,9 +30,16 @@ link .gitconfig              ~/.gitconfig
 link starship.toml           ~/.config/starship.toml
 link ghostty/config          ~/.config/ghostty/config
 link mise/config.toml        ~/.config/mise/config.toml
-link lazygit/config.yml      ~/Library/Application\ Support/lazygit/config.yml
+link git/$OS.gitconfig       ~/.config/git/os.gitconfig
 link agents/.skill-lock.json ~/.agents/.skill-lock.json
 link zed/settings.json       ~/.config/zed/settings.json
+
+# lazygit は OS ごとに設定ファイルの場所が違う
+if [ "$OS" = macos ]; then
+  link lazygit/config.yml ~/Library/Application\ Support/lazygit/config.yml
+else
+  link lazygit/config.yml ~/.config/lazygit/config.yml
+fi
 
 # docker CLI プラグイン（Homebrew の compose / buildx を docker から使えるようにする）
 if command -v brew >/dev/null; then
