@@ -1,0 +1,5 @@
+name: gemini_advisor_sensor
+title: Gemini Advisor & Sensor (gemini-api CLI)
+description: Call the Gemini API CLI on the N100 as an external advisor (design review, second opinion, Deep Research) and as a sensor (image, PDF, video, audio and YouTube analysis, transcription) when a task needs judgement or media understanding beyond your own context.
+category: "Work and knowledge"
+include_in_prompt: false

@@ -32,6 +32,9 @@ link ghostty/config          ~/.config/ghostty/config
 link mise/config.toml        ~/.config/mise/config.toml
 link git/$OS.gitconfig       ~/.config/git/os.gitconfig
 link agents/.skill-lock.json ~/.agents/.skill-lock.json
+
+# 自作エージェントスキル（Claude Code 用）
+link agents/skills/gemini-advisor-sensor ~/.claude/skills/gemini-advisor-sensor
 link zed/settings.json       ~/.config/zed/settings.json
 
 # lazygit は OS ごとに設定ファイルの場所が違う
