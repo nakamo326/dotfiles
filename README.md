@@ -5,7 +5,7 @@ macOS / Linux（Debian・Ubuntu 系）用の dotfiles。
 ## 新しいマシンで
 
 ```sh
-git clone https://github.com/nakamo326/dotfiles_mac.git ~/dotfiles
+git clone https://github.com/nakamo326/dotfiles.git ~/dotfiles
 ~/dotfiles/install.sh   # Homebrew・パッケージ・リンク・mise のツール
 ~/dotfiles/macos.sh     # macOS の設定（任意。macOS のみ）
 ```
